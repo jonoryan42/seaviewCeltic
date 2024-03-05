@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="css/richtext.min.css">
+       <link rel ="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+      
+       <style>
+      </style>
+      
+</head>
+    <body>
+        <div class="ui container">
+               <nav>
+            <div class="ui large pointing menu">
+            <a class="item" href="index.html">Home</a>
+            <a class="item" href="history.html">History</a>
+            <a class="item" href="community.html">Community</a>
+                </div>
+                   </nav>
+                </div>
+        <div class="ui segment">
+            <header>
+            <h1>Apply for a Team</h1>
+                <div id="instruct">Eligible teams printed at end of page after submission.<i class="large down arrow icon"></i></div>
+            </header>
+            <div class="ui grid container">
+        <form method="get" id="application" class="ui form">
+            <div class ="inline field">
+            <label for="contactname" class="three wide field">Name</label>
+            <input type="text" name="contactname" id="contactname" class="eight wide field" autofocus required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)*" title="Please enter a name (Surname optional) with First Letter capitalised">
+            </div>
+            <div class="inline field">
+       <label for = "email" class= "three wide field">Email Address</label>
+       <input type="email" name="email" id="email" class="eight wide field" required pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$"
+              title="Please enter a valid email">
+            </div>
+             <div  class = "inline field">
+          <label for = "age" class= "three wide field">Age </label>
+       <input type="number" name="age" id="age" min = "6" max = "60" step = "1" class="four wide field" 
+              title="Please enter correct age">
+            </div>
+            <div> 
+                <div class="inline field">
+            <label for = "position" class= "three wide field">Favoured Position</label>
+                <div id ="dropdown" class= "eight wide field"></div>
+                    </div>
+            </div>
+            <br><br>
+             Please provide any other details you think will be useful to us in the text area below(e.g. Past-Playing Experience, Medical History).
+       <div  class = "inline field">
+          <br> <label for="details" class= "Four wide field" id="deets">More details(as much as you think we'll need!)</label>
+          <textarea id = "details" name = "details" class="twelve wide field"></textarea>
+       </div>
+             <div>
+                 <input type="submit" class ="ui green button" value="Submit">
+           <input type="reset" class="ui red button" value="Clear">    
+       </div>
+            </form>
+            </div>
+             <div class="ui proc text container">
+  <h1>Thank you for applying, we will be in touch soon...</h1>
+    <p>You are eligible to play for: </p>
+    <p id="apply1"></p>
+            </div>
+            </div>
+         <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" 
+  crossorigin="anonymous">
+ </script>
+       <script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+        <script src="js/client.js"></script>
+        <script src="js/jquery.richtext.min.js"></script>
+        <script src="https://jsuites.net/v4/jsuites.js"></script>
+        <script src="js/jSuites.js"></script>
+        <script> 
+                $(() => {
+     $('#details').richText();
+  });
+</script>
+    </body>
+</html>
